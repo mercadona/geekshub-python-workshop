@@ -15,7 +15,7 @@ def get_catalog():
 class TestCartTotalPrice(unittest.TestCase):
 
     def test_returns_zero_when_cart_empty(self):
-        cart = Cart(catalog=[])
+        cart = Cart(catalog=get_catalog())
 
         self.assertEqual(cart.total_price(), Decimal('0.00'))
 
